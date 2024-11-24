@@ -50,7 +50,7 @@ jobs:
         uses: actions/deploy-pages@v4.0.5
         with:
           artifact_name: dist
-          token: ${{ secrets.GH_PAGE }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
 
 
