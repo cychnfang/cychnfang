@@ -1,11 +1,10 @@
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import VueMacros from 'unplugin-vue-macros/vite'
-// import vue from '@vitejs/plugin-vue'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: 'dockertest',
   server: {
     port: 8080
   },
@@ -14,12 +13,19 @@ export default defineConfig({
       plugins: {
         vue: Vue()
       }
+    }),
+    viteStaticCopy({
+      targets: [
+        {
+          src: `${__dirname}/src/assets/favicon.ico`,
+          dest: `${__dirname}/dist/`
+        }
+      ]
     })
   ],
   resolve: {
     alias: {
       '@': '/src'
     }
-  },
-  build: {}
+  }
 })

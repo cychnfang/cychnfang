@@ -22,11 +22,11 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["vitest", "vitest/globals"]
+    "types": ["unplugin-vue-macros/macros-global", "vitest", "vitest/globals"]
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.d.ts",
+    "src/env.d.ts",
     "src/**/*.vue",
     "test/**/*.spec.ts"
   ],

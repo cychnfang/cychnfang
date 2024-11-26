@@ -35,7 +35,7 @@ jobs:
           path: dist
 
   deploy:
-    name: deploy githupage
+    name: deploy github page
 
     environment: github-pages
     permissions:

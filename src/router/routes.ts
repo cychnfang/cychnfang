@@ -1,10 +1,18 @@
-import { RouteRecordRaw } from 'vue-router'
+import Layout from '@/layout/index.vue'
 import Home from '@/pages/Home/index.vue'
 
-const routes: RouteRecordRaw[] = [
+const routes = [
   {
-    path: '/home',
-    component: Home
+    path: '/',
+    component: Layout,
+    redirect: '/home',
+    children: [
+      {
+        path: '/home',
+        name: 'Home',
+        component: Home
+      }
+    ]
   }
 ]
 

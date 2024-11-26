@@ -10,5 +10,7 @@ type PluginConfig = {
 const plugins: PluginConfig[] = [{ plugin: router }]
 
 export default (vueInstance: App) => {
-  plugins.forEach(({ plugin, options }) => vueInstance.use(plugin, options))
+  plugins.forEach(({ plugin, options = {} }) =>
+    vueInstance.use(plugin, options)
+  )
 }

@@ -18,6 +18,7 @@ export default tseslint.config({
     }
   },
   rules: {
-    'no-debugger': 'error'
+    'no-debugger': 'error',
+    "vue/multi-word-component-names": 'off'
   }
 })
